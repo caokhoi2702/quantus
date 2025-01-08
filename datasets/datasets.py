@@ -25,7 +25,7 @@ datasets_dict = {
 def get_dataset(name, root):
     cur_dict = datasets_dict[name]
     if name=='imagenet':
-        dataset = ImageNet("", split=cur_dict['split'], transform=cur_dict['transform'])
+        dataset = ImageNet(path.join(root, ""), split=cur_dict['split'], transform=cur_dict['transform'])
     try:
         file_name = cur_dict['indices_csv']
         subset_indices = pd.read_csv(file_name, header=None)[0].to_numpy()
