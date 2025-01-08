@@ -25,7 +25,7 @@ datasets_dict = {
 def get_dataset(name, root):
     cur_dict = datasets_dict[name]
     if name=='imagenet':
-        os.listdir(path.join(root, name))
+        print(os.listdir(path.join(root, name)))
         dataset = ImageNet(path.join(root, name), split=cur_dict['split'], transform=cur_dict['transform'])
     try:
         file_name = cur_dict['indices_csv']
