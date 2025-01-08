@@ -2,6 +2,7 @@ import pandas as pd
 import torch
 
 import os
+import sys
 from os import path
 
 from torch.utils.data import Dataset
@@ -25,7 +26,7 @@ datasets_dict = {
 def get_dataset(name, root):
     cur_dict = datasets_dict[name]
     if name=='imagenet':
-        print(os.path.dirname("../"))
+        print(os.path.dirname(os.path.abspath(sys.argv[0])) )
         dataset = ImageNet("../", split=cur_dict['split'], transform=cur_dict['transform'])
     try:
         file_name = cur_dict['indices_csv']
