@@ -62,8 +62,6 @@ parser.set_defaults(skip_metrics=False)
 parser.set_defaults(gpu=True)
 
 def main():
-    print(os.path.exists("../../kaggle/working"))
-    print(os.path.exists("../kaggle/working"))
 
     print('[XAI]')
     global args
