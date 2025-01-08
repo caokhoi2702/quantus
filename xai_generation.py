@@ -36,7 +36,7 @@ import quantus
 parser = argparse.ArgumentParser(description='Generate xai maps')
 
 parser.add_argument('--dataset_name',   type=str, default='imagenet',                       help='dataset name')
-parser.add_argument('--dataset_root',   type=str, default='../input',                              help='root folder for all datasets. Complete used path is `dataset_root/dataset_name`')
+parser.add_argument('--dataset_root',   type=str, default='../input/imagenet',                              help='root folder for all datasets. Complete used path is `dataset_root/dataset_name`')
 parser.add_argument('--model',          type=str, default='vit_b16',                        help='model architecture')
 parser.add_argument('--method',         type=str, default='gradcam',                        help='xai method')
 parser.add_argument('--baseline',       type=str, default='',                               help='Indicates the type of baseline: mean, random, uniform, black or white, "" use default by metric if not specified')
