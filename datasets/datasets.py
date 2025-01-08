@@ -24,7 +24,8 @@ datasets_dict = {
 def get_dataset(name, root):
     cur_dict = datasets_dict[name]
     if name=='imagenet':
-        dataset_path = "../../input/imagenet" #For kaggle only
+        dataset_path = "../input/imagenet" #For kaggle only
+        # dataset_path = path.join(root, name)
         dataset = ImageNet(dataset_path, split=cur_dict['split'], transform=cur_dict['transform'])
     try:
         file_name = cur_dict['indices_csv']
